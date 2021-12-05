@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'views/home_view.dart';
 
-//const String initialRoute = "home";
+
 
 
 class AppRoutes{
