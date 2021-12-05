@@ -1,3 +1,3 @@
-# flutter_starter_app
+# Tdos Task List
 
-Flutter starter project (i.e the counter app) redone using MVVM architecture as proposed by FilledStacks. Added some updates off my own. 
+Todo Task List (task manager app) built in flutter with Mongo,Express, NodeJS back end. Filestorage in AWS S3.
