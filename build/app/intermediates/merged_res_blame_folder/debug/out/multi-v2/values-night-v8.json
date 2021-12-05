@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/assaddev/Desktop/big_projects/flutter_starter_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/mohammadassad/Desktop/Big Projects/Tdos_task/tdos-task-list-flutter/tdos-task-list-flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/assaddev/Desktop/big_projects/flutter_starter_app/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/mohammadassad/Desktop/Big Projects/Tdos_task/tdos-task-list-flutter/tdos-task-list-flutter/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -2,12 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'views/home_view.dart';
 
-const String initialRoute = "home";
+//const String initialRoute = "home";
+
+
+class AppRoutes{
+   static const String homeRoute ="home";
+}
+
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case 'home':
+      case AppRoutes.homeRoute:
         return MaterialPageRoute(builder: (_) => HomeView());
 
       default:
