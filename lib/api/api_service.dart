@@ -50,6 +50,29 @@ class APIService {
   }
 
 
+
+
+  Future<Response> postEndpointData({required Endpoint endpoint, required Map postBody}) async{
+
+
+    Uri uri = _api.endpointUri(endpoint);
+    _api.dio.interceptors.add(LogInterceptor(requestBody: true,responseBody: true,request: true));
+    String path = uri.toString();
+
+    final Response res = await _api.dio.post(path,
+        data: postBody,
+    );
+
+
+
+    if(res.statusCode == 200){
+      return res;
+    }
+
+    throw res;
+
+  }
+
   Future<Response> postFormData({required Endpoint endpoint, required FormData formData}) async{
 
 
