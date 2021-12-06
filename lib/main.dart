@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'common/navigation_service.dart';
 import 'locator.dart';
 import 'ui/router.dart';
+
+import 'package:google_fonts/google_fonts.dart';
 import 'ui/views/home_view.dart';
 
 void main() {
@@ -18,9 +20,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: AppRoutes.homeRoute,
       onGenerateRoute: AppRouter.generateRoute,
-      theme: ThemeData(
 
-        primarySwatch: Colors.blue,
+      theme: ThemeData(
+        textTheme: GoogleFonts.latoTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: HomeView(),
     );
