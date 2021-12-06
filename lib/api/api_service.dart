@@ -84,7 +84,7 @@ class APIService {
         data: formData,
         options:Options(
           headers: {
-            Headers.contentLengthHeader: formData.length, //// set content-length
+
             Headers.contentTypeHeader:'multipart/form-data'
           },
         )

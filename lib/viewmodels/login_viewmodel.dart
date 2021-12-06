@@ -3,6 +3,8 @@ import 'package:flutter_starter_app/api/api_service.dart';
 import 'package:flutter_starter_app/api/endpoints.dart';
 import 'package:flutter_starter_app/common/base_model.dart';
 import 'package:flutter_starter_app/common/viewstate.dart';
+import 'package:flutter_starter_app/models/AppLoginModel.dart';
+import 'package:flutter_starter_app/utils/storage/secure_local_storage.dart';
 
 class LoginModel extends BaseModel{
 
@@ -26,6 +28,9 @@ class LoginModel extends BaseModel{
       var response = await APIService().postEndpointData(
           endpoint: Endpoint.login, postBody: loginMapBody);
       if (response.statusCode == 200){
+        var loginModel = AppLoginModel.fromJson(response.data);
+
+        SecureLocalStorage().saveValue("token", loginModel.body!.token);
         setState(ViewState.Idle);
         return true;
       }
@@ -38,4 +43,6 @@ class LoginModel extends BaseModel{
 
 
   }
+
+
 }

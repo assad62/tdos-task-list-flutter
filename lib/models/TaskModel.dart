@@ -3,7 +3,9 @@ class Task {
   String? userId;
   String? title;
   String? description;
-  int? lng;
+  double? lng;
+  double? lat;
+  bool? completed;
   String? attachment;
   String? completeBy;
   String? createdAt;
@@ -20,6 +22,7 @@ class Task {
         this.completeBy,
         this.createdAt,
         this.updatedAt,
+        this.completed,
         this.iV});
 
   Task.fromJson(Map<String, dynamic> json) {
@@ -32,7 +35,9 @@ class Task {
     completeBy = json['completeBy'];
     createdAt = json['createdAt'];
     updatedAt = json['updatedAt'];
+    completed = json['completed'];
     iV = json['__v'];
+    lat = json['lat'];
   }
 
   Map<String, dynamic> toJson() {
@@ -46,6 +51,8 @@ class Task {
     data['completeBy'] = this.completeBy;
     data['createdAt'] = this.createdAt;
     data['updatedAt'] = this.updatedAt;
+    data['completed'] = this.completed;
+    data['lat'] = this.lat;
     data['__v'] = this.iV;
     return data;
   }
